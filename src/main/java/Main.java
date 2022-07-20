@@ -3,8 +3,10 @@ public class Main {
     BonusService service = new BonusService();
     long amount = 1000_60;
     boolean registered = true;
-    service.calculate(amount, registered);
-
+    long expected = 30;
+    long actual = service.calculate(amount, registered);
+    boolean right = expected == actual;
+    System.out.println(right);
   }
 }
 
